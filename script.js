@@ -28,6 +28,14 @@
   var ex3_two = document.getElementById('ex3_two');
   ex3_element.draggable = "true";
 
+  ex3_one.ondragover = function(e) {
+    e.preventDefault();
+  };
+
+  ex3_one.ondrop = function() {
+    ex3_one.appendChild(ex3_element);
+  }
+
   ex3_two.ondragover = function(e) {
     e.preventDefault();
   };
